@@ -1,4 +1,4 @@
-package com.example.todos.auth;
+package com.example.todos.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +9,7 @@ import com.example.todos.auth.dto.AuthenticationRequest;
 import com.example.todos.auth.dto.AuthenticationResponse;
 import com.example.todos.auth.dto.AuthenticationTokenDTO;
 import com.example.todos.auth.dto.RegisterRequest;
+import com.example.todos.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 
 @RestController

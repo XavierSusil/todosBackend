@@ -5,7 +5,6 @@ import java.util.Objects;
 import org.hibernate.annotations.Type;
 import com.example.todos.enums.Priority;
 import com.example.todos.enums.TodoStatus;
-import com.example.todos.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
