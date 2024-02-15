@@ -3,7 +3,7 @@ package com.example.todos.repository;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.todos.model.TodoDAO;
-import com.example.todos.user.User;
+import com.example.todos.model.User;
 
 public interface TodoRepository extends JpaRepository<TodoDAO , Integer> {
   

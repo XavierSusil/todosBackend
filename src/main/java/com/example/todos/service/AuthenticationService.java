@@ -1,4 +1,4 @@
-package com.example.todos.auth;
+package com.example.todos.service;
 
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -15,10 +15,10 @@ import com.example.todos.auth.dto.RegisterRequest;
 import com.example.todos.config.JwtService;
 import com.example.todos.enums.Role;
 import com.example.todos.model.TodoDAO;
+import com.example.todos.model.User;
 import com.example.todos.model.dto.TodoResponse;
-import com.example.todos.user.User;
-import com.example.todos.user.UserDTO;
-import com.example.todos.user.UserRepository;
+import com.example.todos.model.dto.UserDTO;
+import com.example.todos.repository.UserRepository;
 import java.util.Collections;
 import lombok.RequiredArgsConstructor;
 

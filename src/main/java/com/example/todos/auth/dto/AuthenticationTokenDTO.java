@@ -1,6 +1,6 @@
 package com.example.todos.auth.dto;
 
-import com.example.todos.user.UserDTO;
+import com.example.todos.model.dto.UserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

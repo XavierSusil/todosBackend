@@ -1,7 +1,6 @@
-package com.example.todos.user;
+package com.example.todos.model.dto;
 
 import java.util.Set;
-import com.example.todos.model.dto.TodoResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.example.todos.user;
+package com.example.todos.model;
 
 import java.util.Collection;
 import java.util.List;
@@ -9,7 +9,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.example.todos.enums.Role;
-import com.example.todos.model.TodoDAO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,7 +31,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "user_details")
 public class User implements UserDetails {
 
   /**

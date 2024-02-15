@@ -12,7 +12,7 @@ import com.example.todos.model.dto.TodoStatusDTO;
 import com.example.todos.model.dto.TodoStatusWithIdDTO;
 import com.example.todos.repository.CategoryRepository;
 import com.example.todos.repository.TodoRepository;
-import com.example.todos.user.UserRepository;
+import com.example.todos.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
