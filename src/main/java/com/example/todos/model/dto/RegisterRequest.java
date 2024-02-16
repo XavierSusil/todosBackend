@@ -1,4 +1,4 @@
-package com.example.todos.auth.dto;
+package com.example.todos.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

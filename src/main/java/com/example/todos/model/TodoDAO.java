@@ -2,7 +2,6 @@ package com.example.todos.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
-import org.hibernate.annotations.Type;
 import com.example.todos.enums.Priority;
 import com.example.todos.enums.TodoStatus;
 import jakarta.persistence.Column;

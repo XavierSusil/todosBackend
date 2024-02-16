@@ -1,4 +1,4 @@
-package com.example.todos.auth.dto;
+package com.example.todos.model.dto;
 
 public interface AuthenticationResponse {
   
