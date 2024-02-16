@@ -23,14 +23,13 @@ public class TodoService {
   private final UserRepository userRepository;
   private final CategoryRepository categoryRepository;
 
-
   public TodoResponse createTodo(CreateTodoRequest request) {
 
     var user = userRepository.findById(request.getUserid());
-    
+
     /*
-     * id = 1 means 'none' is the default category 
-     * */
+     * id = 1 means 'none' is the default category
+     */
     int id = 1;
     if (request.getCategoryid() != null)
       id = request.getCategoryid();
@@ -38,17 +37,17 @@ public class TodoService {
 
     if (!user.isPresent())
       return null;
-
+ 
     if (!category.isPresent()) {
-      return null;
+      var toSaveCategory =  CategoryDAO.builder().id(1).category("none").build();
+      categoryRepository.save(toSaveCategory);
+      category = categoryRepository.findById(1);
     }
 
     var todo = TodoDAO.builder().title(request.getTitle()).description(request.getDescription())
         .priority(request.getPriority()).status(request.getStatus()).user(user.get())
         .categoryDao(category.get()).build();
-
     todoRepository.save(todo);
-
     var savedTodo = todoRepository.findTopByUserOrderByIdDesc(todo.getUser());
     if (savedTodo.isPresent()) {
       var todoObject = savedTodo.get();
@@ -88,27 +87,27 @@ public class TodoService {
     return updatedTodo(id);
 
   }
-  
+
   public Object updateStatus(List<TodoStatusWithIdDTO> request) {
-    
-    List<TodoResponse> toReturn = new ArrayList<TodoResponse>();
-    for(var current:request) {
-      
-      var returned = updateStatus(current.getStatus(),current.getId());
+
+    List<TodoResponse> toReturn = new ArrayList<>();
+    for (var current : request) {
+
+      var returned = updateStatus(current.getStatus(), current.getId());
       toReturn.add(returned);
     }
-    
+
     return toReturn;
   }
 
   public TodoResponse updateTodo(CreateTodoRequest request, String id) {
 
     TodoDAO todo = todoRepository.findById(Integer.parseInt(id)).orElse(null);
-    
+
     int _id = 1;
     if (request.getCategoryid() != null)
       _id = request.getCategoryid();
-    
+
     var categoryOpt = categoryRepository.findById(_id);
 
     CategoryDAO category = null;
@@ -138,7 +137,8 @@ public class TodoService {
   }
 
   public void deleteTodo(List<String> ids) {
-    for(var id : ids) deleteTodo(id);
+    for (var id : ids)
+      deleteTodo(id);
   }
 
 

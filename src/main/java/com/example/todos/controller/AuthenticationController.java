@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.todos.auth.dto.AuthenticationRequest;
-import com.example.todos.auth.dto.AuthenticationResponse;
-import com.example.todos.auth.dto.AuthenticationTokenDTO;
-import com.example.todos.auth.dto.RegisterRequest;
+import com.example.todos.model.dto.AuthenticationRequest;
+import com.example.todos.model.dto.AuthenticationResponse;
+import com.example.todos.model.dto.AuthenticationTokenDTO;
+import com.example.todos.model.dto.RegisterRequest;
 import com.example.todos.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 
