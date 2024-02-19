@@ -1,4 +1,4 @@
-package com.example.todos.config;
+package com.example.todos.service;
 
 import java.security.Key;
 import java.util.Date;
