@@ -7,7 +7,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import com.example.todos.config.JwtService;
 import com.example.todos.enums.Role;
 import com.example.todos.model.TodoDAO;
 import com.example.todos.model.User;
